@@ -1,0 +1,21 @@
+{
+  "name": "fullstack-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full stack portfolio built with React, Node.js, Express, MySQL and Tailwind CSS.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "db:setup": "npm run db:setup --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
